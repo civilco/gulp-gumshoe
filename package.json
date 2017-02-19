@@ -1,0 +1,19 @@
+{
+  "name": "gumshoe",
+  "version": "0.0.1",
+  "description": "Report the size of the bundle to slack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/civilco/gumshoe.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "gulp-util": "^3.0.0",
+    "node-fetch": "^1.6.3",
+    "pretty-bytes": "^3.0.1",
+    "stream-counter": "^1.0.0",
+    "through2": "^2.0.0",
+    "vinyl": "^2.0.1"
+  }
+}
