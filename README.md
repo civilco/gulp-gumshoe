@@ -2,11 +2,11 @@
 A Gulp plugin to watch your asset sizes.
 
 ## Install
-`npm i civilco/gumshoe --save-dev`
+`npm install gulp-gumshoe --save-dev`
 
 In your Gulpfile:
 ```javascript
-const gumshoe = require('gumshoe');
+const gumshoe = require('gulp-gumshoe');
 gulp.task('deploy-assets', () => {
   return gulp.src('./dist/**/*')
   .pipe(gumshoe({ apiKey: 'abc123' }));
