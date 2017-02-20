@@ -1,10 +1,10 @@
 {
-  "name": "gumshoe",
+  "name": "gulp-gumshoe",
   "version": "0.0.1",
-  "description": "Report the size of the bundle to slack",
+  "description": "Gulp plugin to report asset sizes to slack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/civilco/gumshoe.git"
+    "url": "https://github.com/civilco/gulp-gumshoe.git"
   },
   "main": "index.js",
   "dependencies": {
