@@ -63,7 +63,7 @@ module.exports = (opts) => {
     log(chalk.green('all files'), totalSize);
 
     let env = opts.env || process.env['NODE_ENV'] || 'development';
-    fetch('https://ji53fd606b.execute-api.us-west-2.amazonaws.com/v1/files?env='+encodeURIComponent(env)+'&api_key='+encodeURIComponent(opts.apiKey), {
+    fetch('https://api.gumshoebot.com/v1/files?env='+encodeURIComponent(env)+'&api_key='+encodeURIComponent(opts.apiKey), {
       method: 'POST',
       body: JSON.stringify(output),
     })
