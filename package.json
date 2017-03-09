@@ -1,6 +1,6 @@
 {
   "name": "gulp-gumshoe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp plugin to report asset sizes to slack",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
     "gulp-util": "^3.0.0",
     "node-fetch": "^1.6.3",
     "pretty-bytes": "^3.0.1",
+    "qs": "^6.4.0",
     "stream-counter": "^1.0.0",
     "through2": "^2.0.0",
     "vinyl": "^2.0.1"

@@ -5,6 +5,7 @@ const prettyBytes = require('pretty-bytes');
 const StreamCounter = require('stream-counter');
 const path = require('path');
 const fetch = require('node-fetch');
+const qs = require('qs');
 
 module.exports = (opts) => {
   let totalSize = 0;
@@ -62,9 +63,14 @@ module.exports = (opts) => {
   (cb) => {
     log(chalk.green('all files'), totalSize);
 
-    let env = opts.env || process.env['NODE_ENV'] || 'development';
-    fetch('https://api.gumshoebot.com/v1/files?env='+encodeURIComponent(env)+'&api_key='+encodeURIComponent(opts.apiKey), {
+    fetch('https://api.gumshoebot.com/v1/files?'+qs.stringify({
+      env: opts.env || process.env['NODE_ENV'] || 'development',
+      name: opts.name,
+    }), {
       method: 'POST',
+      headers: {
+        'Authorization': opts.apiKey,
+      },
       body: JSON.stringify(output),
     })
     .then(() => cb())
